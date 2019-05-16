@@ -1,0 +1,109 @@
+body{
+  background:var(--bgPage);
+  font-family: 'Roboto', sans-serif;
+}
+.card{
+  animation: 1s intro 1;
+}
+.card .cardImg{
+  background: var(--purple);
+  color:white;
+}
+.card .cardImg small{
+  position:absolute;
+  background: orange;
+  padding:2px 8px;
+  color:white;
+  border-radius:50%;
+  margin-left:-3px;
+  margin-top:-5px;
+  box-shadow:0px 2px 1px 1px #333;
+}
+.card .actions{
+  opacity:0;
+}
+.card:hover .actions{
+  opacity:1;
+  transition: all .8s;
+}
+.cardContainer:nth-child(even) .card .cardImg{
+  background:var(--blue);
+}
+.cardImg > div{
+  padding:35px 20px;
+  text-align: center;
+  margin:0 auto;
+  vertical-align: middle;
+}
+.wrapperTitle{
+  padding:10px;
+  border-radius:20px;
+  text-align:center;
+  margin-bottom:20px;
+  margin-top:10px;
+  color:var(--lightBlue);
+  font-size:20pt;
+  font-family:sans-serif;
+  font-weight: bold;
+}
+.wrapperTitle:empty:before{
+  content:"Preencha os campos abaixo";
+  color:#ccc;
+  font-size:20pt;
+  font-family:sans-serif;
+  font-weight: bold;
+}
+.crudForm{
+  background: #fff;
+  box-shadow:0px 0px 4px 1px #ccc;
+  border-radius:8px;
+  margin:40px 10px;
+  padding:10px;
+  animation: 2s intro 1;
+}
+.cardContainer {
+  margin: 4px 0;
+}
+.crudForm input[type="text"]{
+  background: transparent;
+  border:0;
+  padding:10px;
+  font-size:16pt;
+  text-align:center;
+  border-bottom:1px solid var(--grayLight);
+}
+::placeholder {
+  color: #ccc;
+  font-size: 1.5em;
+}
+.crudForm input[type="text"]:focus{
+  border-color:var(--purple);
+  outline: none;
+}
+.actions{
+  margin-top:40px
+}
+.imgNome {
+    border-radius: 50%;
+    background: var(--blue);
+    width: auto;
+    padding: 15px;
+    box-shadow: 0px 0px 0px 20px #fff;
+    width: 110px;
+    margin: -40px auto 20px auto;
+    color: white;
+}
+nav{
+  background-color:var(--purple) !important;
+}
+@keyframes intro {
+  0%   { opacity: 0;transform:translate(0,30px) }
+  100% { opacity: 1;transform:translate(0,0px) }
+}
+:root{
+  --bgPage:#f6f6f6;
+  --blue:#008693;
+  --purple:#003E51;
+  --grayLight:#e0e0e0;
+  --lightBlue:#1087ba;
+}
